@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>RealTime Chat</title>
+</head>
+
+<body>
+    <div style="height: 100vh; width:100vw; font-family: 'Montserrat Alternates', sans-serif;"
+        class="d-flex fw-lighter align-items-center gredient-bg justify-content-center">
+        <div class="card " style="width: 40rem; min-height: 80vh;">
+            <div class="card-header ">
+
+                <h3 class="py-3 text-center text-black-50 fw-bolder"><i
+                        class=" px-3 bi bi-chat-square-quote-fill"></i>HobbyChat</h3>
+                <p>Popular chat rooms</p>
+                <ul class="nav bg-dar text-center nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item " role="presentation">
+                        <button class="nav-link text-black active " name="design" id="design tabMenu" data-bs-toggle="tab"
+                            data-bs-target="#design" type="button" role="tab" aria-selected="true">#Design</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-black" name="tech" id="tech tabMenu" data-bs-toggle="tab" data-bs-target="#tech"
+                            type="button" role="tab" aria-selected="false">#Tech</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-black" id="gaming tabMenu" name="gaming" data-bs-toggle="tab"
+                            data-bs-target="#gaming" type="button" role="tab"
+                            aria-selected="false">#Gaming</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="chatboard bg-dark bg-opacity-10 card-body">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="design" name='room' role="tabpanel" aria-labelledby="home-tab"
+                        tabindex="0">
+                        
+                        
+                    </div>
+                    <div class="tab-pane fade" id="tech" name='room' role="tabpanel" aria-labelledby="profile-tab"
+                        tabindex="0">
+                        
+                    </div>
+                    <div class="tab-pane fade" id="gaming" name='room' role="tabpanel" tabindex="0">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer  bg-light">
+                <form class="m-3 new-name">
+                    <div class="input-group mb-3">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="update screen name"
+                            aria-label="update screen name" aria-describedby="button-addon2">
+                        <input class="btn btn-outline-secondary" type="submit" id="button-addon2"
+                            value="update"></input>
+                    </div>
+                    <div class="update-mssg"></div>
+                </form>
+                <form class="m-3 new-chat">
+                    <div>
+                        <textarea class="form-control" placeholder="your message here..."
+                            id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+                        <input type="submit" class="btn my-2 float-end btn-primary" value="send"></input>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAsw64BxyRPEyhxpfvbAIfUqjNur4yCp1I",
+            authDomain: "live-chat-8f25f.firebaseapp.com",
+            projectId: "live-chat-8f25f",
+            storageBucket: "live-chat-8f25f.appspot.com",
+            messagingSenderId: "230708909485",
+            appId: "1:230708909485:web:fc19bc23e86d0fce28fd24"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+    
+    
+</body>
+
+</html>
